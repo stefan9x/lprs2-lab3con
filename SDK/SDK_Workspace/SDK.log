@@ -1,0 +1,11 @@
+12:01:13.093 INFO  - Processing command line option -hwspec D:\ra234-2013\lab3_2\SDK\SDK_Export\hw\system.xml. 
+12:08:38.079 INFO  - FPGA configured successfully with bitstream "D:/ra234-2013/lab3_2/SDK/SDK_Workspace/lab3_2_hw_platform/download.bit" 
+12:12:21.164 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:12:54.416 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:14:46.562 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:15:41.874 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:17:43.613 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:17:43.628 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

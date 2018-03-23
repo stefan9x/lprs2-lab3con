@@ -1,0 +1,191 @@
+12:03:48 **** Build of project Tutorial_test_bsp ****
+make -k all 
+libgen -hw ../lab3_2_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../lab3_2_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
+-mxl-pattern-compare -mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
+-ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling uartlite"
+"Compiling gpio"
+"Compiling bram"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+12:04:03 **** Build of configuration Debug for project Tutorial_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Tutorial_test_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Tutorial_test_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Tutorial_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Tutorial_test_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Tutorial_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Tutorial_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Tutorial_Test.elf  |tee "Tutorial_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2174	    268	   2080	   4522	   11aa	Tutorial_Test.elf
+'Finished building: Tutorial_Test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Tutorial_Test.elf -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0  |tee "Tutorial_Test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0
+Tutorial_Test.elf 
+
+ELF file	: Tutorial_Test.elf
+elfcheck passed.
+'Finished building: Tutorial_Test.elf.elfcheck'
+' '
+12:05:49 **** Auto Build of project Tutorial_test_bsp ****
+make -k all 
+'Finished building libraries'
+12:05:49 **** Auto Build of configuration Debug for project Tutorial_Test ****
+make all 
+make: Ništa za napraviti za `all'.
+12:07:14 **** Auto Build of configuration Debug for project Tutorial_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Tutorial_test_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Tutorial_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Tutorial_test_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Tutorial_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Tutorial_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Tutorial_Test.elf  |tee "Tutorial_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5178	    272	   2086	   7536	   1d70	Tutorial_Test.elf
+'Finished building: Tutorial_Test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Tutorial_Test.elf -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0  |tee "Tutorial_Test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0
+Tutorial_Test.elf 
+
+ELF file	: Tutorial_Test.elf
+elfcheck passed.
+'Finished building: Tutorial_Test.elf.elfcheck'
+' '
+12:08:39 **** Auto Build of project Tutorial_test_bsp ****
+make -k all 
+'Finished building libraries'
+12:10:20 **** Incremental Build of configuration Debug for project Tutorial_Test ****
+make all 
+make: Ništa za napraviti za `all'.
+12:12:08 **** Auto Build of configuration Debug for project Tutorial_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Tutorial_test_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Tutorial_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Tutorial_test_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Tutorial_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Tutorial_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Tutorial_Test.elf  |tee "Tutorial_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5178	    272	   2086	   7536	   1d70	Tutorial_Test.elf
+'Finished building: Tutorial_Test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Tutorial_Test.elf -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0  |tee "Tutorial_Test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0
+Tutorial_Test.elf 
+
+ELF file	: Tutorial_Test.elf
+elfcheck passed.
+'Finished building: Tutorial_Test.elf.elfcheck'
+' '
+12:12:20 **** Incremental Build of configuration Debug for project Tutorial_Test ****
+make all 
+make: Ništa za napraviti za `all'.
+12:12:53 **** Incremental Build of configuration Debug for project Tutorial_Test ****
+make all 
+make: Ništa za napraviti za `all'.
+12:14:46 **** Incremental Build of configuration Debug for project Tutorial_Test ****
+make all 
+make: Ništa za napraviti za `all'.
+12:15:39 **** Auto Build of configuration Debug for project Tutorial_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Tutorial_test_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:40:15: warning: variable 'OldData' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Tutorial_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Tutorial_test_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Tutorial_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Tutorial_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Tutorial_Test.elf  |tee "Tutorial_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5154	    272	   2086	   7512	   1d58	Tutorial_Test.elf
+'Finished building: Tutorial_Test.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Tutorial_Test.elf -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0  |tee "Tutorial_Test.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../lab3_2_hw_platform/system.xml -pe microblaze_0
+Tutorial_Test.elf 
+
+ELF file	: Tutorial_Test.elf
+elfcheck passed.
+'Finished building: Tutorial_Test.elf.elfcheck'
+' '
+12:15:41 **** Incremental Build of configuration Debug for project Tutorial_Test ****
+make all 
+make: Ništa za napraviti za `all'.
