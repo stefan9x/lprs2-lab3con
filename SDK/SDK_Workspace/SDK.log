@@ -1,3 +1,0 @@
-11:28:44.577 INFO  - Processing command line option -hwspec D:\ra234-2013\lab3\SDK\SDK_Export\hw\system.xml. 
-11:43:07.559 INFO  - FPGA configured successfully with bitstream "D:/ra234-2013/lab3/SDK/SDK_Workspace/lab3_hw_platform/download.bit" 
-11:52:11.297 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
